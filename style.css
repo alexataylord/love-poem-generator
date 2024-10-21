@@ -1,81 +1,129 @@
-body {
-    text-align: center;
-    background: rgb(211, 228, 205);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+	body {
+	    text-align: center;
+	    background: rgb(211, 228, 205);
+	    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
 
-a {
-    color: white;
-}
+	a {
+	    color: rgb(254, 245, 237);
+	}
 
-.container {
-    margin: 120px auto;
-    max-width: 600px;
-}
+	.container {
+	    margin: 120px auto;
+	    max-width: 600px;
+	}
 
-header {
-    margin-bottom: 30px;
-}
+	header {
+	    margin-bottom: 30px;
+	}
 
+	h1 {
+	    color: rgb(153, 167, 153);
+	    text-align: center;
+	    font-weight: 800;
+	    font-size: 36px;
+	    line-height: 1.5;
+	    animation: slideIn 1s ease-out;
+	}
 
-h1 {
-    color: rgb(153, 167, 153);
-    text-align: center;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 1.5;
-}
+	.form-container {
+	    background-color: white;
+	    margin-bottom: 30px;
+	    border-radius: 10px;
+	    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+	    padding: 15px 20px;
+	}
 
-form {
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-    border-radius: 10px;
-    display: flex;
-    margin-bottom: 30px;
-}
+	form {
+	    padding: 30px;
+	    background-color: rgb(254, 245, 237);
+	    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+	    border-radius: 10px;
+	    display: flex;
+	    margin-bottom: 30px;
+	}
 
-.instructions {
-    padding: 16px;
-    border: 1px solid rgba(39, 33, 66, 0.5);
-    width: 80%;
-    font-size: 16px;
-    border-radius: 50px;
-    line-height: 20px;
-    color: rgb(153, 167, 153);
-}
+	.hint {
+	    line-height: 1.5;
+	    margin-top: 5px;
+	    opacity: 0.6;
+	    font-size: 12px;
+	}
 
-h2 {
-    color: rgb(153, 167, 153);
-}
+	.instructions {
+	    padding: 16px;
+	    border: 1px solid rgba(39, 33, 66, 0.5);
+	    width: 80%;
+	    font-size: 16px;
+	    border-radius: 50px;
+	    line-height: 20px;
+	    color: rgb(153, 167, 153);
+	}
 
+	h2 {
+	    color: rgb(153, 167, 153);
+	}
 
-.submit-button {
-    margin-left: 10px;
-    background: rgb(153, 167, 153);
-    color: rgb(254, 245, 237);
-    border: none;
-    width: 150px;
-    font-size: 16px;
-    border-radius: 50px;
-    padding: 14px 24px;
-}
+	.submit-button {
+	    margin-left: 10px;
+	    background: rgb(153, 167, 153);
+	    color: rgb(254, 245, 237);
+	    border: none;
+	    width: 150px;
+	    font-size: 16px;
+	    border-radius: 50px;
+	    padding: 14px 24px;
+	}
 
-.love {
-    font-size: 16px;
-    background-color: rgb(254, 245, 237);
-    padding: 20px;
-    line-height: 2;
-    border-left: 3px solod #885df1;
-    box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
-}
+	.poem {
+	    font-size: 16px;
+	    background-color: rgb(254, 245, 237);
+	    padding: 20px;
+	    line-height: 2;
+	    border-left: 3px solid #885df1;
+	    /* Fixed typo here */
+	    box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+	}
 
+	.hidden {
+	    display: none;
+	}
 
+	.poem strong {
+	    color: #885df1;
+	}
 
+	@keyframes slideIn {
+	    from {
+	        transform: translateX(-100%);
+	        opacity: 0;
+	    }
 
-footer {
-    color: rgb(173, 194, 169);
-    text-align: center;
-    font-size: 13px;
-    margin-top: 30px;
-}
+	    to {
+	        transform: translateX(0);
+	        opacity: 1;
+	    }
+	}
+
+	.generating {
+	    animation: blink-animation 1s steps(5, start) infinite;
+	}
+
+	@keyframes blink-animation {
+	    to {
+	        visibility: hidden;
+	    }
+	}
+
+	@-webkit-keyframes blink-animation {
+	    to {
+	        visibility: hidden;
+	    }
+	}
+
+	footer {
+	    color: rgb(173, 194, 169);
+	    text-align: center;
+	    font-size: 13px;
+	    margin-top: 30px;
+	}

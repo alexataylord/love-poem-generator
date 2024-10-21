@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
-    <title>AI Love Poems</title></head>
+    <title>AI Love Food Poem</title></head>
     <body>
         <div class="container">
     <header>
+        <img src="https://th.bing.com/th/id/OIP.o8q5NuajQKKcXzBWjKavKwHaE8?rs=1&pid=ImgDetMain"/>
     <h1>Welcome to the AI Love Food Generator</h1>
     </header>
     <h2>Everyone in the world loves food. It's what can make traveling so special and memorable. Type in below, any country and our AI generator, Tom will come up with the most popular dishes from that place. Have fun & enjoy!</h2>
-    </h2>
+
 
     <main>
-    <form>
+        <div class="form-container">
+    <form id="poem-generator-form">
    <input 
    type="text"
-   placeholder="Enter any country to get their most popular dish..."
+   placeholder="Enter any country for dish"
    autofocus
    required
    autocomplete="off"
    class="instructions"
+   id="user-instructions"
+   aria-label="Country input"
    />
-   <input type="submit" class="submit-button"/>
+   <input type="submit" class="submit-button" value="Generate"/>
   </form>
-  <div class="love">
-
+  <div class="hint">ex: Norway, Austraila, Denmark...</div>
   </div>
-  </div>
+  <div class="poem hidden" id="poem"></div>
   </main>
   
    
@@ -36,5 +41,13 @@
     <a href="https://lovefoodgenerator.netlify.app/" target="_blank">Hosted on Netlify</a> 
 </footer>
     <script src="index.js"></script>
+    <script>
+        document.getElementById('poem-generator-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const country = document.getElementById('user-instructions').value;
+            document.getElementById('poem').innerText = `You entered: ${country}. Now, let Tom generate some delicious dishes for you!`;
+            document.getElementById('poem').classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
